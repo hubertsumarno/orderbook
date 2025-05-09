@@ -1,6 +1,8 @@
-#include "orderbook_lib/orderbook.h"
+#include "orderbook_lib/Orderbook.h"
 
 int main() {
-  orderbook_lib::print_hello();
+  Orderbook orderbook;
+
+  // Do some operations with the orderbook
 }
 
