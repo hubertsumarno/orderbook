@@ -5,6 +5,7 @@
 #include <format>
 
 #include "OrderType.h"
+#include "Usings.h"
 #include "Side.h"
 
 class Order
