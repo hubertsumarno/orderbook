@@ -27,7 +27,7 @@ void Orderbook::PruneGoodForDayOrders()
 		auto till = next - now + milliseconds(100);
 
 		{
-			std::unique_lock ordersLock{ ordersMutex_ };
+			std::unique_lock<std::mutex> ordersLock{ ordersMutex_ };
 
 			if (shutdownConditionVariable_.wait_for(ordersLock, till) == std::cv_status::no_timeout)
 				return;
